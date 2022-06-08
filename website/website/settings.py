@@ -86,6 +86,14 @@ TEMPLATES = [
 WSGI_APPLICATION = "website.wsgi.application"
 
 
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_COOKIE_AGE = 86400 # sec
+SESSION_COOKIE_DOMAIN = None
+SESSION_COOKIE_NAME = 'DSESSIONID'
+SESSION_COOKIE_SECURE = False
+
+
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
