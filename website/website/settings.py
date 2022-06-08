@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
+import random
+import string
 
 from dotenv import load_dotenv
 import django_on_heroku
@@ -98,12 +100,16 @@ SESSION_COOKIE_SECURE = False
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 # Create a named in-memory db that can be used from multiple spots.
-in_memory_db = sqlite3.connect("file:in_memory_db?mode=memory&cache=shared", uri=True)
+sqlite_db_name = "file:{}?mode=memory&cache=shared".format(
+    random.sample(string.ascii_letters, k=8)
+)
+
+in_memory_db = sqlite3.connect(sqlite_db_name, uri=True)
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": "file:in_memory_db?mode=memory&cache=shared",
+        "NAME": sqlite_db_name,
     },
 }
 
