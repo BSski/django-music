@@ -11,8 +11,6 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 import os
 from pathlib import Path
-import random
-import string
 
 from dotenv import load_dotenv
 import django_on_heroku
@@ -88,28 +86,16 @@ TEMPLATES = [
 WSGI_APPLICATION = "website.wsgi.application"
 
 
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-SESSION_SAVE_EVERY_REQUEST = True
-SESSION_COOKIE_AGE = 86400 # sec
-SESSION_COOKIE_DOMAIN = None
-SESSION_COOKIE_NAME = 'DSESSIONID'
-SESSION_COOKIE_SECURE = False
-
-
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 # Create a named in-memory db that can be used from multiple spots.
-sqlite_db_name = "file:{}?mode=memory&cache=shared".format(
-    random.sample(string.ascii_letters, k=8)
-)
-
-in_memory_db = sqlite3.connect(sqlite_db_name, uri=True)
+in_memory_db = sqlite3.connect("file:in_memory_db?mode=memory&cache=shared", uri=True)
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": sqlite_db_name,
+        "NAME": "file:in_memory_db?mode=memory&cache=shared",
     },
 }
 
