@@ -1,6 +1,8 @@
-from django.test import TestCase
 from datetime import date
-from music.models import Song, Author
+
+from django.test import TestCase
+
+from music.models import Author, Song
 
 
 class AuthorModelTest(TestCase):
@@ -34,5 +36,4 @@ class SongModelTest(TestCase):
             surname="TestSurname",
         )
         self.test_song.authors.set([test_author])
-
         self.assertEqual(self.test_song.authors.count(), 1)

@@ -10,4 +10,3 @@ class BooksListHttpMethodsTest(TestCase):
     def test_can_see_home_view(self):
         response = self.client.get(self.home_url, secure=True)
         self.assertEqual(response.status_code, 200)
-

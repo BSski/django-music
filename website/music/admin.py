@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Song, Author
+from .models import Author, Song
 
 
 class SongInline(admin.TabularInline):
