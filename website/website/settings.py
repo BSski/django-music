@@ -154,7 +154,3 @@ SESSION_COOKIE_SECURE = int(os.environ.get("SESSION_COOKIE_SECURE", True))
 
 
 django_on_heroku.settings(locals(), databases=False, test_runner=False)
-
-
-# if "OPTIONS" in DATABASES["default"]:
-#     del DATABASES["default"]["OPTIONS"]["sslmode"]
