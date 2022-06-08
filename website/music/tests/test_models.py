@@ -15,7 +15,7 @@ class SongModelTest(TestCase):
         # )
 
     def test_song_str_equals_song_title(self):
-        #self.assertEqual(str(self.test_song), self.test_song.title)
+        # self.assertEqual(str(self.test_song), self.test_song.title)
         self.assertEqual(1, 1)
 
 
@@ -30,5 +30,5 @@ class AuthorModelTest(TestCase):
         # )
 
     def test_author_str_equals_name_and_surname(self):
-        #self.assertEqual(str(self.test_author), f"{self.name} {self.surname}")
+        # self.assertEqual(str(self.test_author), f"{self.name} {self.surname}")
         self.assertEqual(1, 1)
