@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+import sqlite3
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -83,11 +84,14 @@ WSGI_APPLICATION = 'website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# Create a named in-memory db that can be used from multiple spots.
+in_memory_db = sqlite3.connect("file:in_memory_db?mode=memory&cache=shared", uri=True)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+        'NAME': 'file:in_memory_db?mode=memory&cache=shared',
+    },
 }
 
 
