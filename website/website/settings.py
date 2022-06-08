@@ -146,6 +146,9 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
+CSRF_TRUSTED_ORIGINS = ["https://django-music-bsski.herokuapp.com"]
+
+
 CSRF_COOKIE_SECURE = int(os.environ.get("SESSION_COOKIE_SECURE", True))
 SESSION_COOKIE_SECURE = int(os.environ.get("SESSION_COOKIE_SECURE", True))
 
