@@ -1,1 +1,1 @@
-# DjangoSongsAPI
+# DjangoMusic
