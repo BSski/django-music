@@ -7,6 +7,7 @@ class MusicConfig(AppConfig):
     name = "music"
 
     def ready(self):
+        """Run migrations and create a superuser programatically."""
         management.call_command("makemigrations")
         management.call_command("migrate")
         management.call_command("createsuperuser", "--noinput")
