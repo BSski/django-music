@@ -19,7 +19,7 @@ blocks:
   - name: Tests
     task:
       secrets:
-        - name: codecov
+        - name: codecov-music
       env_vars:
         - name: DEBUG
           value: '0'
@@ -68,4 +68,4 @@ promotions:
   - name: Dockerize
     pipeline_file: pipeline_2.yml
     auto_promote:
-      when: branch = 'development' AND result = 'passed'
+      when: branch = 'main' AND result = 'passed'
