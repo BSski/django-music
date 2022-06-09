@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 
-ADMIN_LOGIN_URL = os.environ.get("ADMIN_LOGIN_URL")
+ADMIN_LOGIN_URL = os.environ.get("ADMIN_LOGIN_URL", "hidden_admin_url")
 
 urlpatterns = [
     path(f"{ADMIN_LOGIN_URL}/", admin.site.urls),
