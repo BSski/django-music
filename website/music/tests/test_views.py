@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 
-class ViewsHttpMethodsTest(TestCase):
+class ViewsTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.home_url = reverse("home")
