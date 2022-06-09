@@ -19,7 +19,7 @@ blocks:
   - name: Tests
     task:
       secrets:
-        - name: codecov
+        - name: codecov-music
       env_vars:
         - name: DEBUG
           value: '0'
