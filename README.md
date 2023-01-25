@@ -5,7 +5,7 @@
 
 <div markdown="1" align="center">
 
-[![Build Status](https://bsski.semaphoreci.com/badges/DjangoMusic/branches/main.svg?style=shields&key=db2ffdf5-30e8-46f6-83af-6960beb104fc)](https://bsski.semaphoreci.com/projects/DjangoMusic)
+![Build Status](https://bsski.semaphoreci.com/badges/DjangoMusic/branches/main.svg?style=shields&key=db2ffdf5-30e8-46f6-83af-6960beb104fc)
 [![Maintainability](https://api.codeclimate.com/v1/badges/b72dd7a07942d939db01/maintainability)](https://codeclimate.com/github/BSski/DjangoMusic/maintainability)
 [![CodeFactor](https://www.codefactor.io/repository/github/bsski/django-music/badge)](https://www.codefactor.io/repository/github/bsski/django-music)
 [![codecov](https://codecov.io/gh/BSski/DjangoMusic/branch/main/graph/badge.svg?token=Y21Z7RMYJL)](https://codecov.io/gh/BSski/DjangoMusic)
