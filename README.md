@@ -23,6 +23,7 @@
   <b>[Heroku retracted its free tier, therefore all my demos are unavailable until further notice.]</b>
 </p>
 
+<!--
 <p align="center">
   https://django-music-bsski.herokuapp.com/
 </p>
@@ -30,7 +31,7 @@
 <p align="center">
 Live demo's admin credentials are available upon request.
 </p>
-
+-->
 
 
 
